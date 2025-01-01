@@ -5,9 +5,7 @@ async function fetchPostsAndGenerateHTML() {
 
         // Get UUID from localStorage
         const uuid = localStorage.getItem("uuid");
-        if (!uuid) {
-            throw new Error("No UUID found in localStorage. Please log in.");
-        }
+        
         // console.log('UUID being sent:', uuid);
         // Fetch data from the API with UUID in the headers
         const response = await fetch(apiUrlPrefixProd+"/posts", {
