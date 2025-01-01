@@ -1,0 +1,1 @@
+const apiUrlPrefixProd = "https://34.93.117.42";

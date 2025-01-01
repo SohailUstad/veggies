@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Progress Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef; /* Light gray background for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .progress-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Box shadow for depth */
+        }
+        .progress-label {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 18px;
+        }
+        .progress {
+            height: 30px;
+            border-radius: 20px;
+            overflow: hidden; /* Makes sure the rounded corners work properly */
+        }
+        .progress-bar {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 30px; /* Center text vertically */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-label">Project Completion</div>
+        <div class="progress bg-light">
+            <div class="progress-bar bg-primary" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                80%
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

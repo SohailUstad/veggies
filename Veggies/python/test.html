@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1 id="data"></h1>
+        <button id="fetchData">Click</button>
+
+        <script>
+            $(document).ready(function () {
+                $('#fetchData').click(function () {
+                    // Make the AJAX GET request
+                    $.ajax({
+                        url: 'http://localhost:8080/hello', // Replace with your API URL
+                        method: 'GET',
+                        success: function (response) {
+                            $("#data").html(response)
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle errors
+                            alert('Error: ' + error);
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
