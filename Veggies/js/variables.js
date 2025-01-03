@@ -1,1 +1,1 @@
-const apiUrlPrefixProd = "https://34.93.117.42";
+const apiUrlPrefixProd = "https://backend.only49.in";
