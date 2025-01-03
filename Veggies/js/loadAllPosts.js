@@ -75,7 +75,7 @@ async function fetchPostsAndGenerateHTML() {
         });
     } catch (error) {
         console.error("Error fetching or processing posts:", error);
-        $("#loginModal").modal("show");
+        
     }
 }
 
