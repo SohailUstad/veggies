@@ -42,7 +42,7 @@ async function fetchPostsAndGenerateHTML() {
             
             const cardHTML = `
                 <div class="card product-card">
-                    <img src="${post.postImage}" 
+                    <img src="${post.postImage.replace('34.93.117.42','backend.only49.in')}" 
                         alt="${post.postQualityTitle}" 
                         class="card-img-top product-image" 
                         data-target="#imageModal" 
