@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR LED Mirror</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 500px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Try Our LED Mirror in Your Space</h1>
+
+    <model-viewer id="mirrorViewer"
+        src="sofa.glb" 
+        ar 
+        ar-modes="scene-viewer quick-look webxr"
+        camera-controls
+        poster="loading.jpg"
+        shadow-intensity="1"
+        auto-rotate>
+    </model-viewer>
+
+    <br>
+    <button onclick="startAR()">View in Your Room</button>
+
+    <script>
+        function startAR() {
+            let modelViewer = document.querySelector('#mirrorViewer');
+            if (modelViewer.canActivateAR) {
+                modelViewer.activateAR();
+            } else {
+                alert("AR is not supported on your device.");
+            }
+        }
+    </script>
+</body>
+</html>
